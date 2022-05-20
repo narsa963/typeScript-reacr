@@ -1,11 +1,11 @@
 class Todo {
-   id: string ;
+   id: number ;
    text: string; 
 
-   constructor(todoText: string,id:string){
+   constructor(todoText: string){
        console.log('test1');
        this.text = todoText;
-       this.id = id;
+       this.id = Math.random();
    }
 }
 export default Todo;
