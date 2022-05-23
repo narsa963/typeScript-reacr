@@ -1,6 +1,6 @@
-const TodoItems:React.FC<{text: string}>=(props)=>{
+const TodoItems:React.FC<{text: string, onRemoveTodo: ()=>void}>=(props)=>{
  return(
-    <li>{props.text}</li> 
+    <li onClick={props.onRemoveTodo}>{props.text}</li> 
  )
 }
 export default TodoItems;

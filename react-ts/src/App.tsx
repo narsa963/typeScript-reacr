@@ -14,10 +14,21 @@ function App() {
     });
     
   };
+
+    const removeHandler=(todoId: number)=>{
+      setTodos((prevValue)=>{
+        return prevValue.filter(todo=>todo.id !== todoId);
+      })
+    }
+
   return (
     <div>
       <NewTodo onAddTodo={addtodoHandler}/>
-     <Todos items={todos} item = "test" />
+     <Todos 
+       items={todos} 
+       item = "test" 
+       onRemoveTodo={removeHandler}
+       />
     </div>
   );
 }
